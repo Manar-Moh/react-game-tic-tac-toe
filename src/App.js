@@ -47,7 +47,7 @@ function App() {
   const [players, setPlayers] = useState(PLAYERS);
   const [gameTurn, setGameTurn] = useState([]);
   const activePlayer = getActivePlayer(gameTurn);
-  const gameboard = deriveGameBoard(gameTurn);
+  let gameboard = deriveGameBoard(gameTurn);
   const winner = deriveWinner(gameboard);
   const hasDraw = !winner && gameTurn.length == 9;
 
@@ -72,7 +72,7 @@ function App() {
 
   function restartGame() {
     setGameTurn([]);
-    gameboard = initalGameBoard;
+    gameboard = INIT_GAME_BOARD;
   }
 
   return (
