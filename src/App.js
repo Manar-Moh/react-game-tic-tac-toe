@@ -22,7 +22,7 @@ function getActivePlayer(prevTurns) {
 }
 
 function deriveWinner(gameboard) {
-  for (compination of WINNING_COMBINATIONS) {
+  for (const compination of WINNING_COMBINATIONS) {
     const first = gameboard[compination[0].row][compination[0].column];
     const second = gameboard[compination[1].row][compination[1].column];
     const third = gameboard[compination[2].row][compination[2].column];
